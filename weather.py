@@ -1,5 +1,5 @@
 # function to get weather response
-def weather_response(location, API_key):
+def weather_response(location, API_key):	
 	import urllib.request
 	c="http://api.openweathermap.org/data/2.5/forecast?q="
 	e=c+location+'&APPID='+API_key
@@ -8,7 +8,7 @@ def weather_response(location, API_key):
 	# write your code 
 
 # function to check for valid response 
-def has_error(location,json):
+def has_error(location,json):	#function to check if location is available or not
 	if json.find('"name":"'+location+'"')==-1 :
 		return True
 	else:	
